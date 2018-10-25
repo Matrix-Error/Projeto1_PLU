@@ -1,2 +1,2 @@
 # Projeto1_PLU
-Website pessoal - Projeto 1 de Plataformas Ubíquas
+Web site pessoal - Projeto 1 de Plataformas Ubíquas
