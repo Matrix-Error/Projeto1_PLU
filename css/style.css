@@ -7,6 +7,10 @@
     background-repeat: repeat; background-attachment: fixed;
 }
 
+/*map code*/
+#map {
+    height: 500px;
+}
 
 
 

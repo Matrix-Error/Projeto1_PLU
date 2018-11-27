@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/theme.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx_GC2bxp_3zG3FwZcWS3t_zC_RP3zqwI&callback=initMap">
+</script>
     <title>Sara Oliveira</title>
   
 </head>
@@ -31,7 +34,16 @@
           <div class="py-5">
                 <div class="container">
                   <div class="row">
-                        <div class="col-md-6" style="" ><iframe width="100%" height="400" src="https://maps.google.com/maps?q=San%20Francisco&amp;z=12&amp;t=k&amp;output=embed" scrolling="no" frameborder="0"></iframe></div>
+
+                    <!-- Location info map-->
+                    <div class="col-md-6" style="" >
+                      <div id="map">
+                          
+                      </div>
+                      <iframe width="100%" height="400" src="https://maps.google.com/maps?q=San%20Francisco&amp;z=12&amp;t=k&amp;output=embed" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                    
+                    
                     <div class="col-md-6">
                       <div class="mx-auto p-4 col-md-12">
                         <h2 class="mb-4">Mensagem</h2>
