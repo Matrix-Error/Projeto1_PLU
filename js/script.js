@@ -1,30 +1,57 @@
-// map javaScript code
+// map code
 
 function initMap() {
-  let myLatlng = new google.maps.LatLng(-34.397, 150.644);
-  let mapOptions = {
-  zoom: 8,
-  center: myLatlng,
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-  styles:[ { "elementType": "geometry", "stylers": [ { "color": "#1d2c4d" } ] }, { "elementType": "labels.text.fill", "stylers": [ { "color": "#8ec3b9" } ] }, { "elementType": "labels.text.stroke", "stylers": [ { "color": "#1a3646" } ] }, { "featureType": "administrative.country", "elementType": "geometry.stroke", "stylers": [ { "color": "#4b6878" } ] }, { "featureType": "administrative.land_parcel", "elementType": "labels.text.fill", "stylers": [ { "color": "#64779e" } ] }, { "featureType": "administrative.province", "elementType": "geometry.stroke", "stylers": [ { "color": "#4b6878" } ] }, { "featureType": "landscape.man_made", "elementType": "geometry.stroke", "stylers": [ { "color": "#334e87" } ] }, { "featureType": "landscape.natural", "elementType": "geometry", "stylers": [ { "color": "#023e58" } ] }, { "featureType": "poi", "elementType": "geometry", "stylers": [ { "color": "#283d6a" } ] }, { "featureType": "poi", "elementType": "labels.text.fill", "stylers": [ { "color": "#6f9ba5" } ] }, { "featureType": "poi", "elementType": "labels.text.stroke", "stylers": [ { "color": "#1d2c4d" } ] }, { "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [ { "color": "#023e58" } ] }, { "featureType": "poi.park", "elementType": "labels.text.fill", "stylers": [ { "color": "#3C7680" } ] }, { "featureType": "road", "elementType": "geometry", "stylers": [ { "color": "#304a7d" } ] }, { "featureType": "road", "elementType": "labels.text.fill", "stylers": [ { "color": "#98a5be" } ] }, { "featureType": "road", "elementType": "labels.text.stroke", "stylers": [ { "color": "#1d2c4d" } ] }, { "featureType": "road.highway", "elementType": "geometry", "stylers": [ { "color": "#2c6675" } ] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [ { "color": "#255763" } ] }, { "featureType": "road.highway", "elementType": "labels.text.fill", "stylers": [ { "color": "#b0d5ce" } ] }, { "featureType": "road.highway", "elementType": "labels.text.stroke", "stylers": [ { "color": "#023e58" } ] }, { "featureType": "transit", "elementType": "labels.text.fill", "stylers": [ { "color": "#98a5be" } ] }, { "featureType": "transit", "elementType": "labels.text.stroke", "stylers": [ { "color": "#1d2c4d" } ] }, { "featureType": "transit.line", "elementType": "geometry.fill", "stylers": [ { "color": "#283d6a" } ] }, { "featureType": "transit.station", "elementType": "geometry", "stylers": [ { "color": "#3a4762" } ] }, { "featureType": "water", "elementType": "geometry", "stylers": [ { "color": "#0e1626" } ] }, { "featureType": "water", "elementType": "labels.text.fill", "stylers": [ { "color": "#4e6d70" } ] } ]
-  };
-  let map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  const myLoc = new google.maps.LatLng(41.532076, -8.615683)
+  const mapOptions = {
+  zoom: 17,
+  center: myLoc,
+  mapTypeId: google.maps.MapTypeId.HYBRID,
+  styles:[]
+  }
+  const map = new google.maps.Map(
+    document.getElementById("map"), 
+    mapOptions)
 
-/*
-  map = new google.maps.Map(document.getElementById('map'),{
-    center: {lat: 41.156111, lng: -8.601111}, zoom: 13
-  });*/
+  var marker = new google.maps.Marker({
+    position:myLoc,
+    animation:google.maps.Animation.BOUNCE
+  });
+    
+  marker.setMap(map);
+}
+
+
+//email setup
+function sendEmail(){
+
+  //obter valores do formulario no html
+  const name = document.querySelector("#form31").value
+  const message = document.querySelector("#form32").value
+
+  //inicializar o componente EmailJS
+  emailjs.init("user_Zni2vc8JG9QRLWFsFRAJ5")
+
+  //valores a alterar pelas variáveis do formulário
+  const template_params = {
+      "reply_to": "reply_to_value",
+      "from_name": name,
+      "to_name": "to_name_value",
+      "message_html": message
+   }
+   
+   const service_id = "default_service"
+   const template_id = "template_x508AHEY"
+   emailjs.send(service_id,template_id,template_params)
 }
 
 
 
-
-
+//filter gallery
 
 filterSelection("all") // Execute the function and show all columns
 function filterSelection(c) {
   let x, i;
-  x = document.getElementsByClassName("portfolio");
+  x = document.getElementsByClassName("column");
   if (c == "all") c = "";
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {

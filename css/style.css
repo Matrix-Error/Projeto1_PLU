@@ -9,7 +9,8 @@
 
 /*map code*/
 #map {
-    height: 500px;
+    height: 100%;
+    width:100%
 }
 
 
@@ -46,6 +47,7 @@
   padding: 10px 10px;
   background-color: white;
   cursor: pointer;
+  color: #000000;
 }
 
 /* Add a grey background color on mouse-over */
