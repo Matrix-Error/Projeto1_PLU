@@ -42,6 +42,7 @@ function sendEmail(){
    const service_id = "default_service"
    const template_id = "template_x508AHEY"
    emailjs.send(service_id,template_id,template_params)
+   alert ("Mensagem enviada!")
 }
 
 
