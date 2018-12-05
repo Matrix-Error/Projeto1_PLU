@@ -1,20 +1,51 @@
-.display-3, .lead, .mb-4 {
+.display-3 {
+    color: #FFFFFF;
+    text-align: end;
+}
+
+.mb-4 {
+    color: #000;
+}
+
+.lead{
     color: #FFFFFF;
 }
+
+/*.mb-3{
+    
+}*/
 
 .py-5 {
     background-image: url(../img/DSC_0727.JPG);	background-position: right bottom;	background-size: cover;	
     background-repeat: repeat; background-attachment: fixed;
 }
+/*
+.footer {
+    margin-left: auto;
+    margin-right: auto;
+}
+#form {
+    
+}*/
 
-/*map code*/
-#map {
+.img-fluid{
+    max-width: 100%;
+  height: auto;
+}
+
+.container {
     height: 100%;
-    width:100%
 }
 
 
+/*map code*/
+#map {
+    height: 350px;
+    width:100%;
+}
 
+
+/*gallery code*/
 /* Create three equal columns that floats next to each other */
 .column {
     float: left;

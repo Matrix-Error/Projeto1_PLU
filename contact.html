@@ -22,64 +22,57 @@
             <li class="nav-item mx-2" > <a class="nav-link" href="portfolio.html">Work</a> </li>
             <li class="nav-item mx-2"> <a class="nav-link" href="about.html">About</a> </li>
            <!-- <li class="nav-item mx-2"> <a class="nav-link" href="experience.html">Previous Experience</a> </li>-->
-            <li class="nav-item mx-2"> <a class="nav-link" href="contact.html">Leave a Message</a> </li>
+            <li class="nav-item mx-2 active"> <a class="nav-link" href="contact.html">Leave a Message</a> </li>
           </ul>
         </div>
       </div>
     </nav>
 
-<!-- Formulário-->
-          <div class="py-5">
+          <div class="py-3">
                 <div class="container">
+
                   <div class="row">
 
                     <!-- Location info map-->
-                    <div class="col-md-6 col-sm-6" style="" >
+                    <div class="col-md-6 col-sm-6">
                       <div id="map">
                           
                       </div>
                     </div>
                     
-                    
+                    <!-- Formulário-->
                     <div class="col-md-6">
                       <div class="mx-auto p-4 col-md-12 col-sm-6">
                         <h2 class="mb-4">Mensagem</h2>
-                        <form>
-                          <div class="form-group"> 
-                            <input type="email" class="form-control" id="form31" placeholder="Email"> 
-                          </div>
-                          <div class="form-group"> 
-                            <textarea class="form-control" id="form32" rows="3" placeholder="Escreva aqui a mensagem"></textarea> 
-                          </div> 
+                        <form id="form">
+                        <div class="form-group">
+                          <input type="email" class="form-control" id="form31" placeholder="Email" required="required"> <br>
+                        </div>
+                        <div class="form-group">
+                          <textarea class="form-control" id="form32" rows="3" placeholder="Escreva aqui a mensagem" required="required"></textarea> <br>
+                        </div>
                           <input type="button" value="Enviar" class="btn btn-primary" onclick="sendEmail()">
 
-                          <!--
-                          <button type="submit" class="btn btn-primary" onclick="sendEmail()">Enviar</button>-->
                         </form>
                       </div>
                     </div>
                   </div>
+
+                  <div class="row footer">
+                      <div class="col-md-6 text-center d-flex my-2">
+                        <p class="mb-0">© 2014-2018 Pingendo. All rights reserved</p>
+                      </div>
+                      <div class="col-md-6 d-flex align-items-end justify-content-end my-2"> <a href="#">
+                          <i class="d-block fa fa-facebook-official text-muted fa-lg mr-2"></i>
+                        </a> <a href="#">
+                          <i class="d-block fa fa-instagram text-muted fa-lg mx-2"></i>
+                        </a> 
+                      </div>
+                    </div>
+
                 </div>
               </div>
 
-
-    <div class="py-3">
-      <div class="container">
-        
-            <div class="row">
-              <div class="col-md-6 text-center">
-                <p class="mb-0">© 2014-2018 Pingendo. All rights reserved</p>
-              </div>
-              <div class="col-md-6 d-flex align-items-end justify-content-end my-2"> <a href="#">
-                  <i class="d-block fa fa-facebook-official text-muted fa-lg mr-2"></i>
-                </a> <a href="#">
-                  <i class="d-block fa fa-instagram text-muted fa-lg mx-2"></i>
-                </a> 
-              </div>
-            </div>
-          
-      </div>
-    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

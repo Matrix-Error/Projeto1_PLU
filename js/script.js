@@ -12,12 +12,25 @@ function initMap() {
     document.getElementById("map"), 
     mapOptions)
 
-  var marker = new google.maps.Marker({
-    position:myLoc,
-    animation:google.maps.Animation.BOUNCE
+
+  const contentInfo='A cidade de Barcelos'
+  const infowindow = new google.maps.InfoWindow({
+    content:contentInfo
   });
-    
+
+  const marker = new google.maps.Marker({
+    position:myLoc,
+    animation:google.maps.Animation.BOUNCE,
+    map:map
+  });
+  
+  marker.addEventListener('click',function(){
+    infowindow.open(map,marker)
+  })
+  
   marker.setMap(map);
+
+ 
 }
 
 
