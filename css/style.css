@@ -1,3 +1,8 @@
+.form-btn{
+    background-color: #666;
+    color: #000;
+}
+
 .display-3 {
     color: #FFFFFF;
     text-align: end;
@@ -11,26 +16,58 @@
     color: #FFFFFF;
 }
 
-/*.mb-3{
-    
-}*/
-
 .py-5 {
     background-image: url(../img/DSC_0727.JPG);	background-position: right bottom;	background-size: cover;	
     background-repeat: repeat; background-attachment: fixed;
 }
-/*
+
 .footer {
-    margin-left: auto;
-    margin-right: auto;
+    padding: 10px;
+   background-color: #FFFFFF;
 }
+
+/*
 #form {
     
 }*/
 
+
+.imgRect {
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    max-height:250px;
+    max-width: 250px;
+}
+.imgRect:hover {
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    max-height:250px;
+    max-width: 250px;
+    cursor: pointer;
+}
+
+.imgHome {
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    max-height:150px;
+    max-width: 150px;
+}
+
+.imgModal {
+    max-height:900px;
+    max-width: 700px;
+    align-content: center;
+    object-fit: contain;
+    width:100%;
+}
+
+
+
 .img-fluid{
     max-width: 100%;
-  height: auto;
 }
 
 .container {
@@ -76,7 +113,7 @@
   border: none;
   outline: none;
   padding: 10px 10px;
-  background-color: white;
+  background-color: lightgray;
   cursor: pointer;
   color: #000000;
 }

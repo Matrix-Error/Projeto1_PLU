@@ -3,7 +3,7 @@
 function initMap() {
   const myLoc = new google.maps.LatLng(41.532076, -8.615683)
   const mapOptions = {
-  zoom: 17,
+  zoom: 16,
   center: myLoc,
   mapTypeId: google.maps.MapTypeId.HYBRID,
   styles:[]
@@ -13,7 +13,8 @@ function initMap() {
     mapOptions)
 
 
-  const contentInfo='A cidade de Barcelos'
+  let contentInfo='<br/><p>Cidade onde nasci e resido atualmente</p>' +
+  '<p><img style="width:200px" src="../img/barcelos.jpg"/></p>';
   const infowindow = new google.maps.InfoWindow({
     content:contentInfo
   });
@@ -24,11 +25,11 @@ function initMap() {
     map:map
   });
   
-  marker.addEventListener('click',function(){
+  marker.addListener('click',function(){
     infowindow.open(map,marker)
   })
-  
-  marker.setMap(map);
+
+  //marker.setMap(map);
 
  
 }
