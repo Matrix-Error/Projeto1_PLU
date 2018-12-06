@@ -64,6 +64,14 @@
     width:100%;
 }
 
+.imgAbout {
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    max-height:530px;
+    max-width: 1500px;
+    align-content: center;
+}
 
 
 .img-fluid{
