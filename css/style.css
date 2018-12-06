@@ -67,7 +67,6 @@
     align-content: center;
 }
 
-
 .img-fluid{
     max-width: 100%;
 }
@@ -76,8 +75,7 @@
     height: 100%;
 }
 
-
-/*map code*/
+/*map size*/
 #map {
     height: 350px;
     width:100%;
